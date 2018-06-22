@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+<link rel="stylesheet" href="style.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="./js/controllers/loginController.js"></script>
+</head>
+<body background="login.jpg" ng-controller='loginController'>
+<div>
+        <h3 style="color: white">{{login}}</h3>
+		<label for="name">Name</label> 
+		<input type="text" placeholder="Enter Name" id="name" ng-model="name">
+
+</div>
+<div>
+		<label for="password">Password</label>
+		<input type="password" placeholder="Enter Password" id="password"
+			ng-model="password"> 
+	</div>
+	
+	<div>
+	    <input type="button" value="submit" ng-click="login()"></input>
+	    <p>Not Registered..?<a  style="color: white;" href="http://localhost:8080/myApp">click here</a></p>
+        </div>
+</body>
+</html>

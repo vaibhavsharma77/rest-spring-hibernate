@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+<title>OSB</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="./js/controllers/controller.js"></script>
+<script type="text/javascript" src="./js/services/onlineService.js"></script>
+</head>
+<body background="service.jpeg" ng-controller='myController'>
+<form>
+	<div>
+		<h3 style="color: white">{{title}}</h3>
+		<label for="name">Name</label> <input type="text"
+			placeholder="Enter Name" id="name" ng-model="newcontact.name">
+
+	</div>
+	<div>
+		<label for="password">Password</label> <input type="password"
+			placeholder="Enter Password" id="password" ng-model="newcontact.password">
+	</div>
+	<div>
+		<label for="email">Email</label> <input type="text"
+			placeholder="Enter Email" ng-model="newcontact.email" id="email">
+	</div>
+	<div>
+		<label for="number">Contact Number</label> 
+		<input type="hidden" ng-model="newcontact.id">
+		<input type="text"
+			placeholder="Enter Phone Number" id="number" ng-model="newcontact.contact">
+	</div>
+<div>
+		<input type="button" value="submit" ng-click="saveContact()"></input>
+		<p style="color: white;">
+			Already Registered..?<a style="color: white;"
+				href="http://localhost:8080/myApp/login.html">click
+				here</a>
+		</p>
+</div>
+</form>
+</body>
+</html>
